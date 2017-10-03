@@ -38,7 +38,9 @@ logger.info('something to log')
 
 ```
 NB :
+
 url is mandatory, headers are optionals.
+
 headers need to be a key/value object.
 
 ex: headers: {key1:value1,key2:value2}
@@ -72,6 +74,7 @@ logger.info({'message': 'something to log'})
 ```
 
 object: true/false, if not present, log is considered to be a string.
+
 addLevel: true/false, auto add level attribute to your object. False if not present.
 
 ```javascript
