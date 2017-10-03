@@ -1,6 +1,6 @@
 {
   "name": "log4js-http",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "log4js-node http appender",
   "main": "index.js",
   "scripts": {
@@ -13,11 +13,10 @@
   "keywords": [
     "log4js",
     "http",
-    "logger"
+    "logger",
+    "node",
+    "log"
   ],
-  "publishConfig": {
-    "registry": ""
-  },
   "author": "jermeo",
   "license": "MIT",
   "bugs": {
