@@ -45,6 +45,8 @@ ex: headers: {key1:value1,key2:value2}
 
 ### Send custom object to an http middleware
 
+If you send objects, the log4js output formatting will be bypassed
+
 ```javascript
 
 const log4js = require('log4js')
