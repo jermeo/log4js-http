@@ -1,6 +1,6 @@
 {
   "name": "log4js-http",
-  "version": "0.0.8",
+  "version": "0.0.10",
   "description": "log4js-node http appender",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/jermeo/log4js-http"
   },
   "keywords": [
     "log4js",
