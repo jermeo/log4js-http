@@ -14,7 +14,7 @@ $ npm i --save log4js-http
 ## Usage
 Config log4js-http is same as the original [log4js-node](https://github.com/nomiddlename/log4js-node).
 
-### Send string to an http middleware
+### Send log string to an http middleware
 
 ```javascript
 
@@ -45,7 +45,7 @@ headers need to be a key/value object.
 
 ex: headers: {key1:value1,key2:value2}
 
-### Send custom object to an http middleware
+### Send custom log object to an http middleware
 
 If you send objects, the log4js output formatting will be bypassed
 
