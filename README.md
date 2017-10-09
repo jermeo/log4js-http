@@ -26,8 +26,8 @@ log4js.configure({
       type: 'log4js-http',
       layout: {type: 'basic'},
       url: 'url_of_your_http_middleware',
-      port: port_of_your_http_middleware
-      headers: 'your headers'
+      port: port_of_your_http_middleware,
+      headers: 'your optionnals headers'
     }
   },
   categories: {default: {appenders: ['http'], level: 'info'}}
@@ -58,10 +58,9 @@ log4js.configure({
   appenders: {
     http: {
       type: 'log4js-http',
-      layout: {type: 'basic'},
       url: 'url_of_your_http_middleware',
-      port: port_of_your_http_middleware
-      headers: 'your headers',
+      port: port_of_your_http_middleware,
+      headers: 'your optionnals headers',
       object: true,
       addLevel: true
     }
