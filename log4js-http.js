@@ -1,6 +1,6 @@
 'use strict'
 
-const request = require('request')
+const http = require('http')
 
 const httpAppender = (config, layout) => {
   return (loggingEvent) => {
@@ -17,19 +17,28 @@ const httpAppender = (config, layout) => {
       message = layout(loggingEvent)
     }
 
-    request.post({
-      headers: config.headers,
-      url: config.url,
-      body: message
-    }, (error, response) => {
-      if (error !== null) {
-        console.error('log4js-http appender - Error happened', error)
-        return
-      }
-      if (response && response.statusCode !== 200) {
-        console.error(`log4js-http appender - Error happened, response.statusCode: ${response.statusCode}`)
+    const options = {
+      host: config.url,
+      path: '/',
+      port: config.port,
+      method: 'POST'
+    }
+
+    const req = http.request(options, (response) => {
+      let status = response.statusCode
+      if (status !== 200) {
+        console.log(`log4js-http appender - Error happened - Response statusCode ${response.statusCode}`)
       }
     })
+
+    req.write(message)
+
+    req.on('err', (err) => {
+      console.error('log4js-http appender - Error happened', err)
+    })
+
+    req.end()
+
   }
 }
 

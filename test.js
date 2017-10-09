@@ -18,7 +18,8 @@ log4js.configure({
   appenders: {
     http: {
       type: 'log4js-http',
-      url: 'http://localhost:9615/',
+      url: 'localhost',
+      port: 9615,
       object: true,
       addLevel: true
     }
