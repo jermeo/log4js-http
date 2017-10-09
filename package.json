@@ -1,6 +1,6 @@
 {
   "name": "log4js-http",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "log4js-node http appender",
   "main": "index.js",
   "scripts": {
