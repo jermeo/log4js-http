@@ -2,7 +2,7 @@
 
 const request = require('request')
 
-function httpAppender (config, layout) {
+const httpAppender = (config, layout) => {
   return (loggingEvent) => {
     let message
     if (config.object && config.object === true) { // log message is an object
@@ -33,7 +33,7 @@ function httpAppender (config, layout) {
   }
 }
 
-function configure (config, layouts) {
+const configure = (config, layouts) => {
   let layout = layouts.messagePassThroughLayout
   if (config.layout) {
     layout = layouts.layout(config.layout.type, config.layout)
@@ -43,4 +43,3 @@ function configure (config, layouts) {
 
 module.exports.configure = configure
 module.exports.appender = httpAppender
-module.exports.name = 'log4js-http'

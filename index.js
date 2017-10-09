@@ -1,1 +1,1 @@
-module.exports = require('./http-logger')
+module.exports = require('./log4js-http')
