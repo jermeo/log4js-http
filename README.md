@@ -25,7 +25,8 @@ log4js.configure({
     http: {
       type: 'log4js-http',
       layout: {type: 'basic'},
-      url: 'url of your http middleware',
+      protocol: 'optionnal protocol, http by default',
+      host: 'mandatory, host of your http middleware',
       port: optionnal port of your http middleware (80 by default),
       path: 'optionnal path (/ by default)',
       headers: 'optionnal headers'
@@ -59,7 +60,8 @@ log4js.configure({
   appenders: {
     http: {
       type: 'log4js-http',
-      url: 'url of your http middleware',
+      protocol: 'optionnal protocol, http by default',
+      host: 'mandatory, host of your http middleware',
       port: optionnal port of your http middleware (80 by default),
       path: 'optionnal path (/ by default)',
       headers: 'optionnal headers',

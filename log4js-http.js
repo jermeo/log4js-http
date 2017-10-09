@@ -18,7 +18,8 @@ const httpAppender = (config, layout) => {
     }
 
     const options = {
-      host: config.url,
+      protocol: config.protocol || 'http:',
+      host: config.host,
       path: config.path || '/',
       port: config.port || 80,
       method: 'POST'
