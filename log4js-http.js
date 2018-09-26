@@ -22,6 +22,7 @@ const httpAppender = (config, layout) => {
       host: config.host,
       path: config.path || '/',
       port: config.port || 80,
+      headers: config.headers || {},
       method: 'POST'
     }
 
